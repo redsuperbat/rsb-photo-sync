@@ -65,6 +65,7 @@ resource "kubernetes_cron_job_v1" "nordic_wellness_booker_job" {
               name  = local.name
               image = "maxrsb/rsb-photo-sync:${var.image_tag}"
               volume_mount {
+                sub_path   = "./originals"
                 name       = local.name
                 mount_path = "/app/photos"
               }
