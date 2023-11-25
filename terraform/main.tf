@@ -16,7 +16,7 @@ provider "kubernetes" {
 }
 
 locals {
-  namespace = "rsb-apps"
+  namespace = "rsb-photoprism"
   name      = "rsb-photo-sync"
 }
 
