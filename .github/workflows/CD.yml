@@ -40,6 +40,6 @@ jobs:
 
       - name: Terraform init and apply
         run: |
-          cd infra
+          cd terraform
           terraform init
-          terraform apply -auto-approve -var="image_tag=${{ github.sha }}"
+          terraform apply -auto-approve -var="image_tag=${{ github.sha }}" -var="ftp_uri=${{ SECRETS.FTP_URI }}"
