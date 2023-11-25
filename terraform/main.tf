@@ -89,7 +89,7 @@ resource "kubernetes_cron_job_v1" "nordic_wellness_booker_job" {
             volume {
               name = local.name
               persistent_volume_claim {
-                claim_name = data.terraform_remote_state.rsb_photoprism.outputs.pvc_name
+                claim_name = "rsb-photoprism"
                 read_only  = true
               }
             }
