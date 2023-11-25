@@ -1,0 +1,23 @@
+{
+  "name": "rsb-photo-sync",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --loader @esbuild-kit/esm-loader --no-warnings --env-file='.env' ./src/main.ts",
+    "dev": "node --loader @esbuild-kit/esm-loader --no-warnings --env-file='.env' --watch ./src/main.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@esbuild-kit/esm-loader": "^2.6.5",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "basic-ftp": "^5.0.3"
+  }
+}
